@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Concluse.org</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho d-flex ">
+            <img class="logo ms-4" src="images/logo.png" alt="">
+            <div class="categorias">
+                <nav class="d-flex align-itens-center">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Camisas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Calçados
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="pesquisa_cabecalho navbar">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search" action="">
+                            <input class="form-control me-2 " type="search" placeholder="Pesquise" aria-label="Search">
+                            <Button class="btn_pesquisar">Pesquisar</Button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="login_btns me-4">
+                <button class="login_btn " data-bs-target="#modalLogin">Login</button>
+                <button class="cadastrar_btn">Cadastrar</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <dialog  id="modal_login">
+            <h1>Funciona</h1>
+        </dialog>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/carrossel_index/img 1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carrossel_index/img 2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/carrossel_index/img 3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="card" style="width: 18rem">
+                <img src="images/carrossel_index/img 3.jpg" class="card-img-top" alt="">
+            </div>
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At quod ab eum voluptatum
+                    voluptate, voluptatibus explicabo tenetur doloremque, reiciendis blanditiis quasi quas illo?
+                    Excepturi ad doloremque nemo repellat in eveniet.</p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</html>
