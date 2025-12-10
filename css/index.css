@@ -106,3 +106,15 @@ nav ul li a:hover{
     padding: 5px;
     width: 15vh;
 }
+
+.carousel-item{
+    height: 100vh;
+}
+
+.carousel-item :active{
+    height: 100vh;
+}
+
+    .card-categoria{
+        color: rgb(125, 125, 125);
+    }
