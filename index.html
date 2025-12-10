@@ -12,45 +12,47 @@
 
 <body>
     <header>
-        <div class="cabecalho d-flex ">
-            <img class="logo ms-4" src="images/logo.png" alt="">
-            <div class="categorias">
-                <nav class="d-flex align-itens-center">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Camisas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Calçados
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav class="pesquisa_cabecalho navbar">
-                    <div class="container-fluid">
-                        <form class="d-flex" role="search" action="">
-                            <input class="form-control me-2 " type="search" placeholder="Pesquise" aria-label="Search">
-                            <Button class="btn_pesquisar">Pesquisar</Button>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-            <div class="login_btns me-4">
+        <div class="cabecalho d-flex justify-content-between">
+            <a href="#">
+                <img class="logo ms-4 d-flex" src="images/logo.png" alt="">
+            </a>
+            <nav class="pesquisa_cabecalho navbar d-flex justify-content-center">
+                <div class="container-fluid">
+                    <form class="d-flex" role="search" action="">
+                        <input class="form-control me-2 " type="search" placeholder="Pesquise" aria-label="Search">
+                        <Button class="btn_pesquisar">Pesquisar</Button>
+                    </form>
+                </div>
+            </nav>
+            <div class=" d-flex justify-content-end login_btns me-4">
                 <button class="login_btn " data-bs-target="#modalLogin">Login</button>
                 <button class="cadastrar_btn">Cadastrar</button>
             </div>
         </div>
+        <div class="categorias">
+            <nav class="d-flex align-itens-center">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Camisas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Calçados
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <dialog  id="modal_login">
+        <dialog id="modal_login">
             <h1>Funciona</h1>
         </dialog>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
