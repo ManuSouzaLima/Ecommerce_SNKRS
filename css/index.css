@@ -7,6 +7,7 @@ header{
     border-bottom: 10px;
     border-color: black;
     border-bottom: solid 1px;
+    position: static;
 }
 
 .categorias{
@@ -115,6 +116,28 @@ nav ul li a:hover{
     height: 100vh;
 }
 
-    .card-categoria{
-        color: rgb(125, 125, 125);
-    }
+.card-categoria{
+    color: rgb(125, 125, 125);
+}
+
+#modal_login{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 15px;
+    padding: 0%;
+}
+
+#modal_login::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal_login .input_login{
+    transition: all 0.5s ease;
+}
+
+
+#btn_fechar:hover{
+    cursor: pointer;
+}
+

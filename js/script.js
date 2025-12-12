@@ -4,6 +4,7 @@ const modal_login = document.getElementById("modal_login")
 const modal_cadastrar = document.getElementById("modal_cadastrar")
 const btn_card = document.getElementById("btn-card")
 const modal_card = document.getElementById("item-card")
+const btn_fechar = document.getElementById("btn_fechar")
 
 btn_login.addEventListener("click", ()=>{
     modal_login.showModal();
@@ -16,5 +17,9 @@ btn_card.addEventListener("click", ()=>{
 btn_cadastro.addEventListener("click", ()=>{
     modal_cadastrar.showModal();
 })
+
+btn_fechar.addEventListener("click", ()=>{
+        modal_login.close();
+    })
 
    
