@@ -1,12 +1,13 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .logo{
     height: 10vh;
     width: 25vh;
 }
 
 header{
-    border-bottom: 10px;
-    border-color: black;
-    border-bottom: solid 1px;
     position: static;
 }
 
@@ -141,3 +142,59 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
+#modal_login form{
+    margin: 20px 20px 20px 20px;
+}
+
+#modal_login form button{
+    color: black;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#modal_login form button:hover{
+    background-color: black;
+    color: white;
+}
+
+#modal_login form input{
+    width: 100%;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.outros_login_google{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.outros_login_google:hover{
+    border-style: solid;
+    border-color: rgb(45, 59, 247);
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.outros_login_facebook{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.outros_login_facebook:hover{
+    border-style: solid;
+    border-color: rgb(45, 59, 247);
+    border-width: 1px;
+    border-radius: 10px;
+}
