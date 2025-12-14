@@ -11,6 +11,9 @@ header{
     position: static;
 }
 
+dialog{
+    width: 110vh;
+}
 .categorias{
     display: flex;
     margin: 0 auto;
@@ -49,8 +52,8 @@ nav ul li a:hover{
 
 .login_btn{
 
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
     border-style: solid;
     border-radius: 10px;
     padding: 5px;
@@ -58,8 +61,8 @@ nav ul li a:hover{
     width: 10vh;
 }
 .login_btn:hover{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
     border-style: solid;
     border-radius: 10px;
     padding: 5px;
