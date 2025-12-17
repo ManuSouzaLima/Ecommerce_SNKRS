@@ -6,6 +6,7 @@ const btn_card = document.getElementById("btn-card")
 const modal_card = document.getElementById("item-card")
 const btn_fechar = document.getElementById("btn_fechar")
 
+
 btn_login.addEventListener("click", ()=>{
     modal_login.showModal();
 })
