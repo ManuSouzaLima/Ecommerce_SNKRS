@@ -32,7 +32,7 @@ if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "conferir_usuario")) {
     $CONSULT->execute();
     $RESULT = $CONSULT->get_result();
     $RESPONSE_CODE = http_response_code();
-    
+
     if (mysqli_num_rows($RESULT) === 0 ) {
         $RETURN[] = array(
             "response" => $RESPONSE_CODE,
@@ -61,6 +61,7 @@ if (($_SERVER["REQUEST_METHOD"] === "POST") && ($REQ === "inserir_usuario")) {
     $CONSULT->execute();
     $RESULT = $CONSULT->get_result();
     $RESPONSE_CODE = http_response_code();
+    
     if ($RESPONSE_CODE === 200) {
         die("Response: {$RESPONSE_CODE}\nUsuario incluido com sucesso");
     }
