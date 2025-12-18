@@ -1,11 +1,13 @@
 <?php
 
 require_once("../config/config.php");
-$REQ = $_REQUEST["requisicao"];
+
+$REQ   = $_REQUEST["request"];
+$EMAIL = $_REQUEST["email"];
+$PASS  = $_REQUEST["password"];
 $RETURN = array();
 
 // Rota para listar os usuarios
-
 if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "listar_usuarios")) {
     $QUERY = "SELECT user_name, email FROM users";
 
@@ -21,6 +23,7 @@ if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "listar_usuarios")) {
     }
     die(json_encode($RETURN));
 }
+
 
 // Rota para conferir se o Usuario existe
 if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "conferir_usuario")) {
@@ -50,19 +53,17 @@ if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "conferir_usuario")) {
 
 }
 
-
 //Rota para Inserir usuarios 
-if (($_SERVER["REQUEST_METHOD"] === "POST") && ($REQ === "inserir_usuario")) {
+if (($_SERVER["REQUEST_METHOD"] === "POST") && ($REQ === "insert_user") && ($EMAIL !== null)  && ($PASS !== null)) {
 
     $QUERY = "INSERT INTO users (user_name,email,user_key)
-              VALUES('Evandro','ev@gmail.com','23232');";
+              VALUES('DEU CERTO','$EMAIL','$PASS');";
 
     $CONSULT = $CONN->prepare($QUERY);
     $CONSULT->execute();
     $RESULT = $CONSULT->get_result();
     $RESPONSE_CODE = http_response_code();
-    
     if ($RESPONSE_CODE === 200) {
-        die("Response: {$RESPONSE_CODE}\nUsuario incluido com sucesso");
+        die("$RESPONSE_CODE");
     }
 }
