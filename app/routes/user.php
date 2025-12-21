@@ -26,10 +26,10 @@ if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "listar_usuarios")) {
 
 
 // Rota para conferir se o Usuario existe
-if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "conferir_usuario")) {
+if (($_SERVER["REQUEST_METHOD"] === "GET") && ($REQ === "search_users")) {
 
     $QUERY = "SELECT * FROM users
-              WHERE users.email = 'ldoc@gmail.com' AND users.user_key = '665';";
+              WHERE users.email = '$EMAIL' AND users.user_key = '$PASS';";
 
     $CONSULT = $CONN->prepare($QUERY);
     $CONSULT->execute();

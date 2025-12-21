@@ -7,16 +7,18 @@ $PASS  =  $_POST["password"];
 
 $URL = "http://localhost/Ecommerce_SNKRS/app/routes/user.php";
 $DATA = array(
-    "request"  => "insert_user",
+    "request"  => "search_users",
     "email"    => $EMAIL,
     "password" => $PASS
 );
+$QUERY_STRING = http_build_query($DATA);
+$GET_URL = $URL . "?" . $QUERY_STRING;
 
-$CH = curl_init(($URL));
-curl_setopt($CH, CURLOPT_POST,true);
-curl_setopt($CH, CURLOPT_POSTFIELDS, http_build_query($DATA));
-
+$CH = curl_init(($GET_URL));
+curl_setopt($CH, CURLOPT_RETURNTRANSFER,true);
+curl_setopt($CH, CURLOPT_HTTPGET,true);
 $SERVER_OUTPUT = curl_exec($CH);
+echo $SERVER_OUTPUT;
 
 if ($SERVER_OUTPUT === '200'){
     header("http://localhost/Ecommerce_SNKRS/");
