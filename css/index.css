@@ -145,11 +145,11 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
-#modal_login form{
+#modal_login .form{
     margin: 20px 20px 20px 20px;
 }
 
-#modal_login form button{
+#modal_login .form button{
     color: black;
     background-color: white;
     border-style: solid;
@@ -161,12 +161,12 @@ nav ul li a:hover{
     margin-bottom: 20px;
 }
 
-#modal_login form button:hover{
+#modal_login .form button:hover{
     background-color: black;
     color: white;
 }
 
-#modal_login form input{
+#modal_login .form input{
     width: 100%;
     border-radius: 5px;
     border-style: solid;

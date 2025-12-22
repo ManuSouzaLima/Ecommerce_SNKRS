@@ -71,7 +71,7 @@
                                 style="width: 20px; height: 20px;">
                         </i>
                     </div>
-                    <form action="./app/controller/controller_login.php" method="post">
+                    <form>
                         <div class="input_login">
                             <label>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -80,7 +80,7 @@
                                         d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                                 </svg>
                                 Email
-                                <input style="padding: 5px;" name="email" id="nome" type="text" placeholder="Digite seu email">
+                                <input style="padding: 5px;" name="email" id="email" type="text" placeholder="Digite seu email">
                             </label>
                         </div>
                         <div class="input_login">
@@ -91,7 +91,7 @@
                                         d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3" />
                                 </svg>
                                 Senha
-                                <input style="padding: 5px;" name="password" id="senha" type="password" placeholder="Digite sua senha">
+                                <input style="padding: 5px;" name="password" id="password" type="password" placeholder="Digite sua senha">
                             </label>
                         </div>
                         <div class="lembrar">
@@ -106,7 +106,7 @@
 
                         </div>
                         <div class="botao_login d-flex justify-content-center">
-                            <button type="submit">Fazer Login</button>
+                            <button id="submit_login" type="button">Fazer Login</button>
                         </div>
                         <div class="outros_login">
                             <div class="outros_login_google mt-3">
@@ -128,7 +128,7 @@
                                             d="M8.75 92.4q10.37-8 20.73-16.08A39.3 39.3 0 0044 95.74a37.16 37.16 0 0014.08 6.08 41.29 41.29 0 0015.1 0 36.16 36.16 0 0013.93-5.5c6.69 5.22 13.41 10.4 20.1 15.62a57.13 57.13 0 01-25.9 13.47 67.6 67.6 0 01-32.36-.35 63 63 0 01-23-11.59A63.73 63.73 0 018.75 92.4z">
                                         </path>
                                     </svg>
-                                    <label for="">
+                                    <label>
                                         Continuar com Google
                                     </label>
                                 </a>
@@ -203,14 +203,11 @@
                     <dialog id="item-card">
                         <h1>Modal item card </h1>
                     </dialog>
-
                 </div>
             </div>
         </div>
     </main>
 </body>
-<script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
+<script src="js/index.js"></script>
 </html>

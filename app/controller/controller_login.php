@@ -2,35 +2,43 @@
 
 session_start();
 
-$EMAIL = $_POST["email"];
-$PASS  =  $_POST["password"];
+header("Content-Type: application/json");
 
-$URL = "http://localhost/Ecommerce_SNKRS/app/routes/user.php";
-$DATA = array(
-    "request"  => "search_users",
-    "email"    => $EMAIL,
-    "password" => $PASS
-);
-$QUERY_STRING = http_build_query($DATA);
-$GET_URL = $URL . "?" . $QUERY_STRING;
+$email = $_GET["email"] ?? null;
+$pass  = $_GET["password"] ?? null;
 
-$CH = curl_init(($GET_URL));
-curl_setopt($CH, CURLOPT_RETURNTRANSFER,true);
-curl_setopt($CH, CURLOPT_HTTPGET,true);
-$SERVER_OUTPUT = curl_exec($CH);
-echo $SERVER_OUTPUT;
+if (!$email || !$pass) {
+    echo json_encode([
+        "sucess"  => false,
+        "message" => "email ou senha vazios"
+    ]);
+} else {
+    $url = "http://localhost/Ecommerce_SNKRS/app/routes/user.php";
 
-if ($SERVER_OUTPUT === '200'){
-    header("http://localhost/Ecommerce_SNKRS/");
+    $data = [
+        "request"  => "search_users",
+        "email"    => $email,
+        "password" => $pass
+    ];
+
+    $queryString = http_build_query($data);
+    $getUrl = $url . "?" . $queryString;
+
+    $ch = curl_init($getUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPGET, true);
+
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    http_response_code($httpCode);
+
+    echo $response;
 }
+
 
 
 //session_start();
 
 //$_SESSION["email"]    = $_POST["email"];
 //$_SESSION["password"] = $_POST["password"];
-
-
-
-
-?>
